@@ -25,9 +25,12 @@ const DarkModeToggle = () => {
     setIsMounted(true);
   }, []);
 
+  console.log(1);
+
   return (
-    <Wrapper>
+    <Wrapper htmlFor="dark-mode-toggle" tabIndex={0}>
       <ToggleBody
+        id="dark-mode-toggle"
         type="checkbox"
         checked={isOn}
         onChange={handleClickCheckBox}
@@ -42,8 +45,8 @@ const Wrapper = styled('label')(() => ({
 }));
 
 const ToggleBody = styled('input')(() => ({
-  WebkitAppearance: 'none',
-  display: 'none',
+  // WebkitAppearance: 'none',
+  // display: 'none',
 }));
 
 const SunIcon = styled(Sun)(() => ({
